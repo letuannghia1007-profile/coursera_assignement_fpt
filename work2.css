@@ -1,0 +1,96 @@
+/* ==========================================
+   CODE CŨ TỪ HOMEWORK 1 (CÓ CHỈNH SỬA)
+   ========================================== */
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+header {
+    background-color: #f4f4f4;
+}
+
+/* THAY ĐỔI: Thẻ nav sử dụng khối nội tuyến và rộng khoảng 80% */
+nav {
+    background-color: #333333;
+    display: inline-block;
+    width: 80%;
+}
+
+main {
+    background-color: #ffffff;
+    font-size: 18px;
+}
+
+footer {
+    background-color: #ddd;
+}
+
+/* NHẬN XÉT (COMMENT) lại kiểu dáng cũ của phần tử li theo yêu cầu */
+/* li {
+    display: inline-block;
+    width: 120px;
+}
+*/
+
+h1 {
+    text-align: center;
+    font-family: 'Times New Roman', serif;
+    color: #0066cc;
+}
+
+p {
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   CODE BỔ SUNG THEO YÊU CẦU MỚI
+   ========================================== */
+
+/* Ẩn liên kết bỏ qua đi và chỉ hiện lên khi người dùng dùng phím Tab (Tối ưu WAVE accessibility) */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    z-index: 100;
+}
+.skip-link:focus {
+    top: 0;
+}
+
+/* Bộ chọn hậu duệ để chỉ tạo kiểu cho hình ảnh TRONG điều hướng (nav) */
+nav img {
+    width: 10%;
+    height: auto;
+}
+
+/* Tạo kiểu cho lớp lưới sử dụng lưới hai cột, mỗi cột xấp xỉ 40% */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 40%);
+    
+    /* Chơi với các giá trị để căn chỉnh ảnh khớp với screenshot của bạn */
+    justify-content: space-between; /* Hoặc center, space-around tùy screenshot */
+    align-items: center;            /* Hoặc stretch, start, end */
+    row-gap: 20px;                  /* Khoảng cách giữa các hàng */
+}
+
+/* Bộ chọn hậu duệ để tạo kiểu cho các hình ảnh TRONG lớp lưới rộng 100% */
+/* Việc này đảm bảo không ảnh hưởng đến ảnh trong .flex-container */
+.grid-container img {
+    width: 100%;
+    height: auto;
+}
+
+/* Tạo kiểu cho lớp flex để sử dụng flex, chơi với flex-wrap và justify-content */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Hoặc center, space-between tùy screenshot */
+    gap: 15px;
+}
